@@ -91,10 +91,11 @@
                WRITE PRNT-REC AFTER ADVANCING 1
                MOVE 1 TO PGCOUNT
            END-IF.
-           WRITE PRNT-REC FROM PRNT-HEADING.
+           WRITE PRNT-REC FROM PRNT-HEADING
+               AFTER ADVANCING PAGE.
            MOVE SPACES TO PRNT-REC.
            WRITE PRNT-REC
-               AFTER ADVANCING PAGE.
+               AFTER ADVANCING 1.
        1500-LOOP.
            PERFORM 1600-PRINT-INFO1.
            PERFORM 2000-READ-INPUT.
